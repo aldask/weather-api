@@ -1,7 +1,10 @@
+import "./styles/Global/global-style.scss";
+import MainPage from "./pages/MainPage";
+
 function App() {
   return (
     <>
-      <h1>page</h1>
+      <MainPage />
     </>
   );
 }
