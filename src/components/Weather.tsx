@@ -2,7 +2,7 @@ function Weather() {
   return (
     <>
       <section className="weather">
-        <div className="weather__container">
+        <div className="container">
           <div className="weather__box">
             <div className="weather__search">
               <input
@@ -14,7 +14,7 @@ function Weather() {
               <button className="weather__search-button">Search</button>
             </div>
             <div className="weather__box-data">
-              <p className="weather__city">City</p>
+              <h2 className="weather__city">City</h2>
               <p className="weather__temp">Current temperature here</p>
               <div className="weather__description">
                 <img

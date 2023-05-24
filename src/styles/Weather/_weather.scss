@@ -1,0 +1,73 @@
+.weather {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: bisque;
+
+  &__box {
+    background-color: rgba(192, 192, 192, 0.178);
+    padding: 2rem;
+    border-radius: 1.3rem;
+
+    .weather__search {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+      margin-bottom: 15px;
+
+      &-input {
+        background-color: black;
+        padding: 10px;
+        outline: none;
+        font-size: 12px;
+        background-color: #f4f4f4;
+        border: none;
+      }
+
+      &-button {
+        background-color: #007bffd0;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 8px 16px;
+        border-radius: 5px;
+        transition: background-color 0.2s ease-in-out;
+
+        &:hover {
+          background-color: #008d4b;
+          color: white;
+        }
+      }
+    }
+
+    &-data {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+
+      .weather__city {
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .weather__temp {
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      .weather__humidity,
+      .weather__speed {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
