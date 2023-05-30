@@ -11,6 +11,7 @@ body {
   justify-content: center;
   height: 100vh;
   font-family: $text-font;
+  color: white;
 }
 .container {
   margin: 0 auto;
@@ -24,4 +25,7 @@ h2 {
 }
 p {
   font-family: $text-font;
+}
+.strong {
+  font-weight: 600;
 }

@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 400px;
   padding: 20px;
-  background-color: #252525a9;
+  background-color: rgba(37, 37, 37, 0.884);
   border-radius: 15px;
 
   &__box {
@@ -30,23 +30,28 @@
         padding: 10px;
         border-radius: 10px;
         transition: 0.2s ease-in-out;
+        color: white;
+        font-weight: 600;
 
         &:hover {
           background-color: azure;
+          color: black
         }
       }
     }
 
     &-data {
       .weather__city {
-        font-weight: 800;
-        text-transform: uppercase;
+        font-weight: 600;
+        text-transform: capitalize;
         margin-bottom: 10px;
+        font-size: 2rem;
       }
 
       .weather__temp {
         margin-bottom: 15px;
         font-weight: 600;
+        font-size: 1.5rem;
       }
 
       .weather__humidity,
@@ -59,6 +64,8 @@
   &__description {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-transform: capitalize;
     gap: 10px;
   }
 }
