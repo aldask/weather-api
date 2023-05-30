@@ -1,28 +1,25 @@
 .weather {
-  width: 100vw;
-  height: 100vh;
   display: flex;
-  align-items: center;
-  background-color: bisque;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  background-color: #252525a9;
+  border-radius: 15px;
 
   &__box {
-    background-color: rgba(192, 192, 192, 0.178);
-    padding: 2rem;
-    border-radius: 1.3rem;
-
     .weather__search {
       display: flex;
-      flex-direction: row;
-      gap: 10px;
+      align-items: center;
       margin-bottom: 15px;
+      gap: 10px;
 
       &-input {
-        background-color: black;
+        flex: 1;
         padding: 10px;
-        outline: none;
-        font-size: 12px;
-        background-color: #f4f4f4;
         border: none;
+        border-radius: 10px;
+        background-color: #f4f4f4;
+        outline: none;
       }
 
       &-button {
@@ -30,23 +27,17 @@
         border: none;
         cursor: pointer;
         outline: none;
-        padding: 8px 16px;
-        border-radius: 5px;
-        transition: background-color 0.2s ease-in-out;
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.2s ease-in-out;
 
         &:hover {
-          background-color: #008d4b;
-          color: white;
+          background-color: azure;
         }
       }
     }
 
     &-data {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 10px;
-
       .weather__city {
         font-weight: 800;
         text-transform: uppercase;

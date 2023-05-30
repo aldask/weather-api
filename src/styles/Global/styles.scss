@@ -5,7 +5,23 @@
 //Component's
 @import "../Weather/weather";
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: $text-font;
+}
 .container {
   margin: 0 auto;
   padding: 0 2.5rem;
+}
+h1 {
+  font-family: $titles-font;
+}
+h2 {
+  font-family: $titles-font;
+}
+p {
+  font-family: $text-font;
 }
