@@ -1,4 +1,4 @@
-import "./styles/Global/global-style.scss";
+import "./styles/Global/styles.scss";
 import MainPage from "./pages/MainPage";
 
 function App() {
