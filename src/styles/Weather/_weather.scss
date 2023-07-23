@@ -1,28 +1,43 @@
 .weather {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  min-width: 400px;
   padding: 20px;
   background-color: rgba(37, 37, 37, 0.884);
   border-radius: 15px;
 
+  @media screen and (max-width: 555px) {
+    min-width: 250px;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
   &__box {
-    .weather__search {
+    &__search {
       display: flex;
       align-items: center;
       margin-bottom: 15px;
       gap: 10px;
 
-      &-input {
+      @media screen and (max-width: 555px) {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      &__input {
         flex: 1;
         padding: 10px;
         border: none;
         border-radius: 10px;
         background-color: #f4f4f4;
         outline: none;
+
+        @media screen and (max-width: 555px) {
+          padding: 0.7rem;
+        }
       }
 
-      &-button {
+      &__button {
         background-color: #007bffd0;
         border: none;
         cursor: pointer;
@@ -33,39 +48,55 @@
         color: white;
         font-weight: 600;
 
+        @media screen and (max-width: 555px) {
+          padding: 0.7rem;
+        }
+
         &:hover {
           background-color: azure;
-          color: black
+          color: black;
         }
       }
     }
 
-    &-data {
-      .weather__city {
+    &__data {
+      &__city {
         font-weight: 600;
         text-transform: capitalize;
         margin-bottom: 10px;
         font-size: 2rem;
+
+        @media screen and (max-width: 555px) {
+          font-size: 1.5rem;
+        }
       }
 
-      .weather__temp {
+      &__temp {
         margin-bottom: 15px;
         font-weight: 600;
         font-size: 1.5rem;
+
+        @media screen and (max-width: 555px) {
+          font-size: 1.2rem;
+        }
       }
 
-      .weather__humidity,
-      .weather__speed {
+      &__humidity,
+      &__speed {
         margin-top: 10px;
       }
-    }
-  }
 
-  &__description {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-transform: capitalize;
-    gap: 10px;
+      &__description {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-transform: capitalize;
+        gap: 10px;
+
+        @media screen and (max-width: 555px) {
+          flex-direction: column;
+        }
+      }
+    }
   }
 }
