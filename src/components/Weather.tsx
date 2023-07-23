@@ -37,7 +37,7 @@ function Weather() {
     fetchData();
   }, [city]);
 
-  // Update weather data and background
+  // Destructuring and updating weather data and background
   const displayWeather = (data: any) => {
     const { name, weather, main, wind } = data;
     const { description, icon } = weather[0];
@@ -68,34 +68,38 @@ function Weather() {
   return (
     <section className="weather">
       <div className="weather__box">
-        <form className="weather__search" onSubmit={handleSearch}>
+        <form className="weather__box__search" onSubmit={handleSearch}>
           <input
             type="text"
             name="searchInput"
             placeholder="Enter a City to check current weather"
-            className="weather__search-input"
+            className="weather__box__search__input"
           />
-          <button type="submit" className="weather__search-button">
+          <button type="submit" className="weather__box__search__button">
             Search
           </button>
         </form>
-        <div className="weather__box-data">
-          <h2 className="weather__city">{result.city}</h2>
-          <p className="weather__temp">{result.currentTemp}°C</p>
-          <div className="weather__description">
+        <div className="weather__box__data">
+          <h2 className="weather__box__data__city">{result.city}</h2>
+          <p className="weather__box__data__temp">{result.currentTemp}°C</p>
+          <div className="weather__box__data__description">
             <img
               src={result.img}
               alt="weather now"
-              className="weather__description-img"
+              className="weather__box__data__description__img"
             />
-            <p className="weather__description-title">{result.description}</p>
+            <p className="weather__box__data__description__title">
+              {result.description}
+            </p>
           </div>
-          <p className="weather__humidity">
-            <span className="strong">Humidity: </span>
+          <p className="weather__box__data__humidity">
+            <span className="weather__box__data__humidity-label">
+              Humidity:{" "}
+            </span>
             {result.humidity}%
           </p>
-          <p className="weather__speed">
-            <span className="strong">Speed: </span>
+          <p className="weather__box__data__speed">
+            <span className="weather__box__data__speed-label">Speed: </span>
             {result.speed} km/h
           </p>
         </div>
